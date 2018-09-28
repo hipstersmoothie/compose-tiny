@@ -1,2 +1,7 @@
-module.exports = (...c) => a =>
-  c.filter(f => f.call).reduceRight((r, f) => f(r), a);
+module.exports = (...c) => a => {
+  let f;
+  while ((f = c.pop())) {
+    a = f.call ? f(a) : a;
+  }
+  return a;
+};

@@ -3,9 +3,11 @@
   "version": "1.0.1",
   "description": "A very tiny compose function.",
   "main": "index.js",
+  "types": "compose-tiny.d.ts",
   "license": "MIT",
   "files": [
-    "index.js"
+    "index.js",
+    "compose-tiny.d.ts"
   ],
   "author": {
     "name": "Andrew Lisowski",
