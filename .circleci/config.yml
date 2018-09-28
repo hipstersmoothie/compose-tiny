@@ -85,7 +85,7 @@ workflows:
           filters:
             tags:
               only: /.*/
-      - publishLibrary:
+      - publish:
           requires:
             - lint
             - test
