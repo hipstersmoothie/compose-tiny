@@ -1,0 +1,50 @@
+{
+  "name": "compose-tiny",
+  "version": "1.0.0",
+  "description": "A very tiny compose function. 105B",
+  "main": "index.js",
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "author": {
+    "name": "Andrew Lisowski",
+    "email": "lisowski54@gmail.com"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "xo"
+  },
+  "devDependencies": {
+    "husky": "^1.0.1",
+    "jest": "^23.6.0",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3",
+    "xo": "^0.23.0"
+  },
+  "xo": {
+    "env": [
+      "jest"
+    ],
+    "extends": [
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}
