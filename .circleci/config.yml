@@ -42,6 +42,18 @@ jobs:
           name: Lint
           command: yarn lint
 
+  test:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/compose-tiny
+      - run:
+          name: Test
+          command: yarn test --ci
+      - run:
+          name: Send CodeCov Results
+          command: bash <(curl -s https://codecov.io/bash) -t $CODECOV_KEY
+
 workflows:
   version: 2
   build_and_test:
@@ -51,6 +63,12 @@ workflows:
             tags:
               only: /.*/
       - lint:
+          requires:
+            - install
+          filters:
+            tags:
+              only: /.*/
+      - test:
           requires:
             - install
           filters:
