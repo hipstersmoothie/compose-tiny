@@ -51,3 +51,9 @@ Output:
 | compose-function | 20,817   | ± 0.49%                                       | 186         | (1.2kB)[https://bundlephobia.com/result?p=compose-function] |
 | fj-compose       | 8,581    | ± 0.61%                                       | 184         | (334B)[https://bundlephobia.com/result?p=fj-compose]       |
 | compose-funcs    | 356      | ± 1.58%                                       | 176         | (594B)[https://bundlephobia.com/result?p=compose-funcs]    |
+
+To rerun this benchmark
+
+```sh
+node benchmark
+```

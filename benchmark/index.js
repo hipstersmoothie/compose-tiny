@@ -11,7 +11,6 @@ const fjCompose = require('fj-compose');
 const chainFunction = require('chain-function');
 const squad = require('squad');
 const composeFuncs = require('compose-funcs');
-const fnCompose = require('fn-compose');
 const composing = require('composing');
 
 let spinner = ora('Running benchmark');

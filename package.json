@@ -31,7 +31,6 @@
     "compose-function": "^3.0.3",
     "composing": "^1.0.1",
     "fj-compose": "^1.1.0",
-    "fn-compose": "^1.1.0",
     "github-semantic-version": "^7.6.0",
     "husky": "^1.0.1",
     "jest": "^23.6.0",
