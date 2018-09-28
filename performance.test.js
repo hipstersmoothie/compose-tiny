@@ -9,7 +9,7 @@ const generateTests = (compose, input) => () => {
     test(compose, input)();
   }
 };
-
+console.log(process.stdout.columns)
 bench('compose(10)', () => {
   Math.floor(generateTests(compose, 10)());
 });
