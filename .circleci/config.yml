@@ -1,0 +1,58 @@
+version: 2
+
+defaults: &defaults
+  working_directory: ~/compose-tiny
+  docker:
+    - image: circleci/node:latest-browsers
+
+jobs:
+  install:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            # Find a cache corresponding to this specific package.json checksum
+            # when this file is changed, this key will fail
+            - compose-tiny-{{ .Branch }}-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+            - compose-tiny-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - compose-tiny-{{ .Branch }}
+            # Find the most recent cache used from any branch
+            - compose-tiny-master
+            - compose-tiny-
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile
+      - save_cache:
+          key: compose-tiny-{{ .Branch }}-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+          paths:
+            - ~/.cache/yarn
+            - node_modules
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+
+  lint:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/compose-tiny
+      - run:
+          name: Lint
+          command: yarn lint
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - install:
+          filters:
+            tags:
+              only: /.*/
+      - lint:
+          requires:
+            - install
+          filters:
+            tags:
+              only: /.*/
