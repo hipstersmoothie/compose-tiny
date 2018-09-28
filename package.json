@@ -16,7 +16,7 @@
   "scripts": {
     "test": "jest",
     "lint": "xo",
-    "release": "DEBUG=github-semantic-version:* github-semantic-version --bump --changelog --push --publish"
+    "release": "github-semantic-version --bump --changelog --push --publish"
   },
   "repository": {
     "type": "git",
