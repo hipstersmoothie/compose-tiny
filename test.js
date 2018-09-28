@@ -14,7 +14,7 @@ test('composes functions', () => {
   expect(testFunction(2)).toBe(16);
 });
 
-test('should ', () => {
+test('should work with different combinations', () => {
   expect(
     compose(
       sqr,

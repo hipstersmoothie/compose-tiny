@@ -42,6 +42,16 @@ jobs:
           name: Lint
           command: yarn lint
 
+  test:
+    <<: *defaults
+    steps:
+      - run:
+          name: Test
+          command: yarn test --ci
+      - run:
+          name: Send CodeCov Results
+          command: bash <(curl -s https://codecov.io/bash) -t $CODECOV_KEY
+
 workflows:
   version: 2
   build_and_test:
