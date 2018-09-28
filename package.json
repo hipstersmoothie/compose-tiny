@@ -1,6 +1,6 @@
 {
   "name": "compose-tiny",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A very tiny compose function. 105B",
   "main": "index.js",
   "license": "MIT",
@@ -13,9 +13,15 @@
   },
   "scripts": {
     "test": "jest",
-    "lint": "xo"
+    "lint": "xo",
+    "release": "github-semantic-version --bump --changelog --push --publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hipstersmoothie/compose-tiny.git"
   },
   "devDependencies": {
+    "github-semantic-version": "^7.6.0",
     "husky": "^1.0.1",
     "jest": "^23.6.0",
     "lint-staged": "^7.3.0",
@@ -50,5 +56,12 @@
   "jest": {
     "coverageDirectory": "./coverage/",
     "collectCoverage": true
+  },
+  "gsv": {
+    "majorLabel": "major",
+    "minorLabel": "minor",
+    "patchLabel": "patch",
+    "internalLabel": "internal",
+    "addReleasedLabelOnSuccess": "released"
   }
 }
