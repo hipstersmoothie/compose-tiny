@@ -16,6 +16,7 @@
   "scripts": {
     "test": "jest",
     "lint": "xo",
+    "benchmark": "node benchmark",
     "release": "github-semantic-version --bump --changelog --push --publish"
   },
   "repository": {
@@ -23,11 +24,23 @@
     "url": "https://github.com/hipstersmoothie/compose-tiny.git"
   },
   "devDependencies": {
+    "benchmark": "^2.1.4",
+    "chain-function": "^1.0.1",
+    "cli-table2": "^0.2.0",
+    "compose-funcs": "^1.0.0",
+    "compose-function": "^3.0.3",
+    "composing": "^1.0.1",
+    "fj-compose": "^1.1.0",
+    "fn-compose": "^1.1.0",
     "github-semantic-version": "^7.6.0",
     "husky": "^1.0.1",
     "jest": "^23.6.0",
+    "just-compose": "^1.1.0",
     "lint-staged": "^7.3.0",
+    "logdown": "^3.2.7",
+    "ora": "^3.0.0",
     "prettier": "^1.14.3",
+    "squad": "^3.0.0",
     "xo": "^0.23.0"
   },
   "xo": {

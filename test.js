@@ -42,3 +42,13 @@ test('should work with different combinations', () => {
     )(2)
   ).toBe(9);
 });
+
+test('should be able to use function multiple times', () => {
+  const testFunction = compose(
+    sqr,
+    add2
+  );
+
+  expect(testFunction(2)).toBe(16);
+  expect(testFunction(2)).toBe(16);
+});
