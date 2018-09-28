@@ -14,7 +14,7 @@ test('composes functions', () => {
   expect(testFunction(2)).toBe(16);
 });
 
-test('filters non-functions', () => {
+test('filters non functions', () => {
   const testFunction = compose(
     sqr,
     1,
