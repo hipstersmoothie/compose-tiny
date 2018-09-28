@@ -1,6 +1,6 @@
 {
   "name": "compose-tiny",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A very tiny compose function. 88B",
   "main": "index.js",
   "license": "MIT",
