@@ -14,6 +14,19 @@ test('composes functions', () => {
   expect(testFunction(2)).toBe(16);
 });
 
+test('filters non-functions', () => {
+  const testFunction = compose(
+    sqr,
+    1,
+    new Date(),
+    {},
+    true,
+    add2
+  );
+
+  expect(testFunction(2)).toBe(16);
+});
+
 test('should work with different combinations', () => {
   expect(
     compose(
