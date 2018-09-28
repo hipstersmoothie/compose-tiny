@@ -45,6 +45,8 @@ jobs:
   test:
     <<: *defaults
     steps:
+      - attach_workspace:
+          at: ~/compose-tiny
       - run:
           name: Test
           command: yarn test --ci
