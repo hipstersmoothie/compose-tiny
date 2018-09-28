@@ -2,7 +2,7 @@
   <img width="200" height="200"
     src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/129/musical-score_1f3bc.png">
   <h1>compose-tiny</h1>
-  <p>A very tiny compose function. (105B)</p>
+  <p>A very tiny compose function. (88B)</p>
 </div>
 
 [![CircleCI](https://img.shields.io/circleci/project/github/hipstersmoothie/compose-tiny/master.svg?style=for-the-badge)](https://circleci.com/gh/hipstersmoothie/compose-tiny/tree/master)[![Codecov](https://img.shields.io/codecov/c/github/hipstersmoothie/compose-tiny.svg?style=for-the-badge)](https://codecov.io/gh/hipstersmoothie/compose-tiny) [![npm](https://img.shields.io/npm/v/compose-tiny.svg?style=for-the-badge)](https://www.npmjs.com/package/compose-tiny)
