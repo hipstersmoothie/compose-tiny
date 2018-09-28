@@ -57,6 +57,15 @@ jobs:
           name: Send CodeCov Results
           command: bash <(curl -s https://codecov.io/bash) -t $CODECOV_KEY
 
+  performance:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/compose-tiny
+      - run:
+          name: Test Performance
+          command: yarn test:performance
+
   publish:
     <<: *defaults
     steps:
@@ -66,7 +75,7 @@ jobs:
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - run:
           name: Publish Library
-          command: npm run release
+          command: yarn release
 
 workflows:
   version: 2
@@ -83,6 +92,12 @@ workflows:
             tags:
               only: /.*/
       - test:
+          requires:
+            - install
+          filters:
+            tags:
+              only: /.*/
+      - performance:
           requires:
             - install
           filters:
