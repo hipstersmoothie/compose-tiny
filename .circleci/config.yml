@@ -54,6 +54,17 @@ jobs:
           name: Send CodeCov Results
           command: bash <(curl -s https://codecov.io/bash) -t $CODECOV_KEY
 
+  publish:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/compose-tiny
+      - run: mkdir ~/.ssh && ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+      - run:
+          name: Publish Library
+          command: npm run release
+
 workflows:
   version: 2
   build_and_test:
@@ -74,3 +85,11 @@ workflows:
           filters:
             tags:
               only: /.*/
+      - publishLibrary:
+          requires:
+            - lint
+            - test
+          filters:
+            branches:
+              only:
+                - master
