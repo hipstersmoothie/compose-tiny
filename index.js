@@ -1,9 +1,7 @@
 module.exports = (...c) => a => {
-  let i = c.length;
-
-  while (i--) {
-    a = c[i].call ? c[i](a) : a;
+  let f;
+  while ((f = c.pop())) {
+    a = f.call ? f(a) : a;
   }
-
   return a;
 };
