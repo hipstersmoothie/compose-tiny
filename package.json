@@ -14,7 +14,7 @@
     "email": "lisowski54@gmail.com"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest index.test.js",
     "test:performance": "zapshot --step 500 --threshold 15 performance.test.js",
     "lint": "xo",
     "benchmark": "node benchmark",
