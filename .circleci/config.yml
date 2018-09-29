@@ -41,6 +41,9 @@ jobs:
       - run:
           name: Lint
           command: yarn lint
+      - run:
+          name: Check Bundle Size
+          command: yarn check-bundle || echo
 
   test:
     <<: *defaults
