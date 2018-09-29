@@ -53,6 +53,69 @@
   dependencies:
     any-observable "^0.3.0"
 
+"@turf/bbox@6.x":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@turf/bbox/-/bbox-6.0.1.tgz#b966075771475940ee1c16be2a12cf389e6e923a"
+  integrity sha512-EGgaRLettBG25Iyx7VyUINsPpVj1x3nFQFiGS3ER8KCI1MximzNLsam3eXRabqQDjyAKyAE1bJ4EZEpGvspQxw==
+  dependencies:
+    "@turf/helpers" "6.x"
+    "@turf/meta" "6.x"
+
+"@turf/center-mean@6.x":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@turf/center-mean/-/center-mean-6.0.1.tgz#263a7e1de6ed864a461ac67e3e2c1411d05dc21e"
+  integrity sha512-69thjNUeXm/68I63EF97h7O8a1nAFuTVZUX+E+BEsRuRvFXcl5nBSRp1SfDE2rd6hQATdJVoA7xlSWgU8/XjLQ==
+  dependencies:
+    "@turf/bbox" "6.x"
+    "@turf/helpers" "6.x"
+    "@turf/meta" "6.x"
+
+"@turf/center-median@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@turf/center-median/-/center-median-6.0.1.tgz#fc2e7c97250c64e876bfc0cf32f3e87dd1199331"
+  integrity sha512-tWXF3DcbOtIjN1aDCzlMoXLQ3d4jDAHrvKMSO78VoMn6jCsEEjqYOVTEKTBot6/rraKRdCMZRfBQ/XBhNNrOhA==
+  dependencies:
+    "@turf/center-mean" "6.x"
+    "@turf/centroid" "6.x"
+    "@turf/distance" "6.x"
+    "@turf/helpers" "6.x"
+    "@turf/meta" "6.x"
+
+"@turf/centroid@6.x":
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/@turf/centroid/-/centroid-6.0.2.tgz#c4eb16b4bc60b692f74e1809cf9a7c4a4f5ba1cc"
+  integrity sha512-auyDauOtC4eddH7GC3CHFTDu2PKhpSeKCRhwhHhXtJqn2dWCJQNIoCeJRmfXRIbzCWhWvgvQafvvhq8HNvmvWw==
+  dependencies:
+    "@turf/helpers" "6.x"
+    "@turf/meta" "6.x"
+
+"@turf/distance@6.x":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@turf/distance/-/distance-6.0.1.tgz#0761f28784286e7865a427c4e7e3593569c2dea8"
+  integrity sha512-q7t7rWIWfkg7MP1Vt4uLjSEhe5rPfCO2JjpKmk7JC+QZKEQkuvHEqy3ejW1iC7Kw5ZcZNR3qdMGGz+6HnVwqvg==
+  dependencies:
+    "@turf/helpers" "6.x"
+    "@turf/invariant" "6.x"
+
+"@turf/helpers@6.x":
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@turf/helpers/-/helpers-6.1.4.tgz#d6fd7ebe6782dd9c87dca5559bda5c48ae4c3836"
+  integrity sha512-vJvrdOZy1ngC7r3MDA7zIGSoIgyrkWcGnNIEaqn/APmw+bVLF2gAW7HIsdTxd12s5wQMqEpqIQrmrbRRZ0xC7g==
+
+"@turf/invariant@6.x":
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/@turf/invariant/-/invariant-6.1.2.tgz#6013ed6219f9ac2edada9b31e1dfa5918eb0a2f7"
+  integrity sha512-WU08Ph8j0J2jVGlQCKChXoCtI50BB3yEH21V++V0T4cR1T27HKCxkehV2sYMwTierfMBgjwSwDIsxnR4/2mWXg==
+  dependencies:
+    "@turf/helpers" "6.x"
+
+"@turf/meta@6.x":
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/@turf/meta/-/meta-6.0.2.tgz#eb92951126d24a613ac1b7b99d733fcc20fd30cf"
+  integrity sha512-VA7HJkx7qF1l3+GNGkDVn2oXy4+QoLP6LktXAaZKjuT1JI0YESat7quUkbCMy4zP9lAUuvS4YMslLyTtr919FA==
+  dependencies:
+    "@turf/helpers" "6.x"
+
 abab@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/abab/-/abab-2.0.0.tgz#aba0ab4c5eee2d4c79d3487d85450fb2376ebb0f"
@@ -728,7 +791,7 @@ chalk@^1.0.0, chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
-chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.3.0, chalk@^2.3.1, chalk@^2.3.2, chalk@^2.4.0:
+chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.3.0, chalk@^2.3.1, chalk@^2.3.2, chalk@^2.4.0, chalk@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.1.tgz#18c49ab16a037b6eb0152cc83e3471338215b66e"
   integrity sha512-ObN6h1v2fTJSmUXoS3nMQ92LbDK9be4TV+6G+omQlGJFdcUX5heKi1LZ1YnRMIgwTLEj3E24bT6tYni50rlCfQ==
@@ -5804,3 +5867,24 @@ yargs@^11.0.0:
     which-module "^2.0.0"
     y18n "^3.2.1"
     yargs-parser "^9.0.2"
+
+zapshot-cli@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/zapshot-cli/-/zapshot-cli-0.1.3.tgz#539ad8ec26833db807f5312dd579d5828188a99a"
+  integrity sha512-CNkiqZSn3y8LdsOyobVe2QzHwax5cOG+3xpTLtOkMsbt9lD4UEhYlZBApfQaZD3Y8ISt5evkaPGGi/zuBuj9YA==
+  dependencies:
+    "@turf/center-median" "^6.0.1"
+    chalk "^2.4.1"
+    debug "^3.1.0"
+    glob "^7.1.2"
+    lodash "^4.17.10"
+    yargs "^11.0.0"
+    zapshot "^0.1.3"
+
+zapshot@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/zapshot/-/zapshot-0.1.3.tgz#6d02a1a333a1e0a6e1f4a4a57485c006c996f2c0"
+  integrity sha512-8Pr8CvBO7Z73ZCmD/7q/GFiJz8PzsK8QGUy8svqy6B/HFyIWNr3gnzBox5DRVdhlnE0Uo6hOyeCqCQZjnGLQtQ==
+  dependencies:
+    chalk "^2.4.1"
+    lodash "^4.17.10"
