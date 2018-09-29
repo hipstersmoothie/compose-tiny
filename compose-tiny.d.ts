@@ -1,5 +1,6 @@
 declare module 'compose-tiny' {
-  type Compose = (...functions: Function[]) => (arg: any) => any;
+  type Step = (arg: any) => any
+  type Compose = (...functions: Step[]) => (arg: any) => any;
 
   const compose: Compose;
   export = compose;
