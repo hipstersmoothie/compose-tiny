@@ -47,7 +47,7 @@ NOTE: bundlephobia includes all files in package
 | NAME             | OPS/SEC  | RELATIVE MARGIN OF ERROR                      | SAMPLE SIZE | BUNDLE SIZE                                                |
 | ---------------- | -------- | --------------------------------------------- | ----------- | ---------------------------------------------------------- |
 | compose-tiny     | 1108,413 | ± 0.72%                                       | 187         | (112B)[https://bundlephobia.com/result?p=compose-tiny]     |
-| squad            | 105,070  | [209B](https://bundlephobia.com/result?p=dlv) | 185         | (517B)[https://bundlephobia.com/result?p=squad]            |
+| squad            | 105,070  | ± 0.62% | 185         | (517B)[https://bundlephobia.com/result?p=squad]            |
 | just-compose     | 46,964   | ± 1.88%                                       | 181         | (334B)[https://bundlephobia.com/result?p=just-compose]     |
 | chain-function   | 22,556   | ± 0.50%                                       | 187         | (341B)[https://bundlephobia.com/result?p=chain-function]   |
 | compose-function | 20,817   | ± 0.49%                                       | 186         | (1.2kB)[https://bundlephobia.com/result?p=compose-function] |
