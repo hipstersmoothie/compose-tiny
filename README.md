@@ -42,6 +42,8 @@ Output:
 
 ## Performance
 
+NOTE: bundlephobia includes all files in package
+
 | NAME             | OPS/SEC  | RELATIVE MARGIN OF ERROR                      | SAMPLE SIZE | BUNDLE SIZE                                                |
 | ---------------- | -------- | --------------------------------------------- | ----------- | ---------------------------------------------------------- |
 | compose-tiny     | 1108,413 | ± 0.72%                                       | 187         | (156B)[https://bundlephobia.com/result?p=compose-tiny]     |
