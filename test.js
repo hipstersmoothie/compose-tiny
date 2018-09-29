@@ -5,7 +5,7 @@ const sqr = x => x ** 2;
 const add1 = add(1);
 const add2 = add(2);
 
-test('composes functions', () => {
+test('should compose functions', () => {
   const testFunction = compose(
     sqr,
     add2
@@ -14,7 +14,7 @@ test('composes functions', () => {
   expect(testFunction(2)).toBe(16);
 });
 
-test('filters non functions', () => {
+test('should filter non functions', () => {
   const testFunction = compose(
     sqr,
     1,
