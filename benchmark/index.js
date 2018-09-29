@@ -3,7 +3,6 @@ const Benchmark = require('benchmark');
 const debug = require('logdown')('compose');
 const Table = require('cli-table2');
 
-const generateTest = require('./generate-test');
 const compose = require('..');
 const composeFunction = require('compose-function');
 const justCompose = require('just-compose');
@@ -12,6 +11,7 @@ const chainFunction = require('chain-function');
 const squad = require('squad');
 const composeFuncs = require('compose-funcs');
 const composing = require('composing');
+const generateTest = require('./generate-test');
 
 let spinner = ora('Running benchmark');
 const benchmark = new Benchmark.Suite('compose');
