@@ -2,12 +2,16 @@
   "name": "compose-tiny",
   "version": "1.1.1",
   "description": "A very tiny compose function.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.m.js",
+  "source": "index.js",
   "types": "compose-tiny.d.ts",
   "license": "MIT",
   "files": [
     "index.js",
-    "compose-tiny.d.ts"
+    "compose-tiny.d.ts",
+    "dist/"
   ],
   "author": {
     "name": "Andrew Lisowski",
@@ -16,6 +20,8 @@
   "scripts": {
     "test": "jest",
     "lint": "xo",
+    "build": "microbundle",
+    "dev": "microbundle watch",
     "benchmark": "node benchmark",
     "check-bundle": "bundlewatch",
     "release": "github-semantic-version --bump --changelog --push --publish"
@@ -39,6 +45,7 @@
     "just-compose": "^1.1.0",
     "lint-staged": "^7.3.0",
     "logdown": "^3.2.7",
+    "microbundle": "^0.6.0",
     "ora": "^3.0.0",
     "prettier": "^1.14.3",
     "squad": "^3.0.0",
