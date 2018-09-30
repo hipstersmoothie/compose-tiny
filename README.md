@@ -9,7 +9,7 @@
 
 > Function composition is an act or mechanism to combine simple functions to build more complicated ones.
 
-`compose-tiny` aims to provide a simple function for composition at the smallest possible size.
+`compose-tiny` aims to provide a simple function for composition at the smallest possible size. It's typescript friendly too!
 
 ## Installation
 
