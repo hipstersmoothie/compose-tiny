@@ -81,11 +81,24 @@ declare module 'compose-tiny' {
     fn0: (...args: any[]) => T1
   ): (...arg: any[]) => T10;
 
+  function Compose<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(
+    fn9: (a: T10) => T11,
+    fn8: (a: T9) => T10,
+    fn7: (a: T7) => T8,
+    fn6: (a: T6) => T7,
+    fn5: (a: T5) => T6,
+    fn4: (a: T4) => T5,
+    fn3: (a: T3) => T4,
+    fn2: (a: T2) => T3,
+    fn1: (a: T1) => T2,
+    fn0: (...args: any[]) => T1
+  ): (...arg: any[]) => T11;
+
   type Step = (arg: any) => any;
   type FirstStep = (...arg: any[]) => any;
 
   function Compose(
-    ...functions: Array<Step | FirstStep>
+    ...functions: Step[]
   ): (...arg: any[]) => any;
 
   export = Compose;
