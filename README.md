@@ -42,6 +42,8 @@ Output:
 
 ## Multiple Arguments
 
+The first function in the composition can take multiple arguments.
+
 ```js
 const compose = require('compose-tiny');
 
