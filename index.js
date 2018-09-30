@@ -1,5 +1,6 @@
 module.exports = (...c) => (...a) => {
-  let i = c.length;
-  while (i--) a = [c[i] ? c[i](...a) : a];
-  return a[0];
+  let i = c.length - 1;
+  a = c[i](...a);
+  while (i--) a = c[i](a);
+  return a;
 };

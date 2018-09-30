@@ -14,19 +14,6 @@ test('should compose functions', () => {
   expect(testFunction(2)).toBe(16);
 });
 
-test('should filter falsy values', () => {
-  const testFunction = compose(
-    sqr,
-    false,
-    undefined,
-    0,
-    null,
-    add2
-  );
-
-  expect(testFunction(2)).toBe(16);
-});
-
 test("should error when a function isn't passed", () => {
   const testFunction = compose(
     sqr,
