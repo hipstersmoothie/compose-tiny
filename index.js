@@ -1,5 +1,5 @@
-module.exports = (...c) => a => {
+module.exports = (...c) => (...a) => {
   let i = c.length;
-  while (i--) a = c[i] ? c[i](a) : a;
-  return a;
+  while (i--) a = [c[i] ? c[i](...a) : a];
+  return a[0];
 };

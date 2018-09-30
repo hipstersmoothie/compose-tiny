@@ -40,6 +40,23 @@ Output:
 🚀 16 🚀
 ```
 
+## Multiple Arguments
+
+```js
+const compose = require('compose-tiny');
+
+const add = x => x + 2;
+const sqr = x => x ** 2;
+
+const blastOff = compose(
+  sqr,
+  add2,
+  (x, y, z) => (x + y) * z
+);
+
+blastOff(1, 2, 4);
+```
+
 ## Performance
 
 NOTE: bundlephobia includes all files in package

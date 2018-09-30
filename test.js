@@ -62,3 +62,14 @@ test('should be able to use function multiple times', () => {
   expect(testFunction(2)).toBe(16);
   expect(testFunction(2)).toBe(16);
 });
+
+test('should allow multiple args to first functions', () => {
+  const testFunction = compose(
+    sqr,
+    add2,
+    (x, y) => x * y
+  );
+
+  expect(testFunction(2, 4)).toBe(100);
+  expect(testFunction(2, 7)).toBe(256);
+});
