@@ -14,17 +14,27 @@ test('should compose functions', () => {
   expect(testFunction(2)).toBe(16);
 });
 
-test('should filter non functions', () => {
+test('should filter falsy values', () => {
   const testFunction = compose(
     sqr,
-    1,
-    new Date(),
-    {},
-    true,
+    false,
+    undefined,
+    0,
+    null,
     add2
   );
 
   expect(testFunction(2)).toBe(16);
+});
+
+test("should error when a function isn't passed", () => {
+  const testFunction = compose(
+    sqr,
+    new Date(),
+    add2
+  );
+
+  expect(() => testFunction(2)).toThrow();
 });
 
 test('should work with different combinations', () => {
