@@ -52,7 +52,7 @@ const sqr = x => x ** 2;
 
 const blastOff = compose(
   sqr,
-  add2,
+  add,
   (x, y, z) => (x + y) * z
 );
 
