@@ -28,7 +28,7 @@ const sqr = x => x ** 2;
 const blastOff = compose(
   x => `🚀 ${x} 🚀`
   sqr,
-  add2
+  add
 );
 
 blastOff(2);
