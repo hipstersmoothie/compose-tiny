@@ -9,7 +9,7 @@
 
 > Function composition is an act or mechanism to combine simple functions to build more complicated ones.
 
-`compose-tiny` aims to provide a simple function for composition at the smallest possible size and the fasted possible speed. It's typescript friendly too!
+`compose-tiny` aims to provide a simple function for composition at the smallest possible size and the fasted possible speed. It's TypeScript friendly too!
 
 ## Installation
 
@@ -61,17 +61,17 @@ blastOff(1, 2, 4);
 
 ## Performance
 
-NOTE: bundlephobia includes all files in package
+NOTE: bundlephobia measures all package files
 
 | NAME             | OPS/SEC  | RELATIVE MARGIN OF ERROR                      | SAMPLE SIZE | BUNDLE SIZE                                                |
 | ---------------- | -------- | --------------------------------------------- | ----------- | ---------------------------------------------------------- |
-| compose-tiny     | 1108,413 | ± 0.72%                                       | 187         | (112B)[https://bundlephobia.com/result?p=compose-tiny]     |
-| squad            | 105,070  | ± 0.62% | 185         | (517B)[https://bundlephobia.com/result?p=squad]            |
-| just-compose     | 46,964   | ± 1.88%                                       | 181         | (334B)[https://bundlephobia.com/result?p=just-compose]     |
-| chain-function   | 22,556   | ± 0.50%                                       | 187         | (341B)[https://bundlephobia.com/result?p=chain-function]   |
-| compose-function | 20,817   | ± 0.49%                                       | 186         | (1.2kB)[https://bundlephobia.com/result?p=compose-function] |
-| fj-compose       | 8,581    | ± 0.61%                                       | 184         | (334B)[https://bundlephobia.com/result?p=fj-compose]       |
-| compose-funcs    | 356      | ± 1.58%                                       | 176         | (594B)[https://bundlephobia.com/result?p=compose-funcs]    |
+| compose-tiny     | 1108,413 | ± 0.72%                                       | 187         | [112 B](https://bundlephobia.com/result?p=compose-tiny)     |
+| squad            | 105,070  | ± 0.62% | 185         | [517 B](https://bundlephobia.com/result?p=squad)            |
+| just-compose     | 46,964   | ± 1.88%                                       | 181         | [334 B](https://bundlephobia.com/result?p=just-compose)     |
+| chain-function   | 22,556   | ± 0.50%                                       | 187         | [341 B](https://bundlephobia.com/result?p=chain-function)   |
+| compose-function | 20,817   | ± 0.49%                                       | 186         | [1.2 kB](https://bundlephobia.com/result?p=compose-function) |
+| fj-compose       | 8,581    | ± 0.61%                                       | 184         | [334 B](https://bundlephobia.com/result?p=fj-compose)       |
+| compose-funcs    | 356      | ± 1.58%                                       | 176         | [594 B](https://bundlephobia.com/result?p=compose-funcs)    |
 
 To rerun this benchmark
 
